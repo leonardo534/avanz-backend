@@ -1,0 +1,2 @@
+1. Instale xampp ou wammp. Abra seu (http://localhost/phpmyadmin) e insira o comando sql que está no arquivo avanz.sql. Ou import o arquivo
+2. Depois disso abra sua pasta htdocs e faça uma pasta chamada api e dentro dela coloque todos os arquivos .PHP
