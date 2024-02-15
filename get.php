@@ -7,7 +7,7 @@ try {
     $pdo = new PDO($dsn, $username, $password);
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT c.id AS id, c.type, c.title, c.description, c.typeMachine,
+    $sql = "SELECT c.id AS id, c.type, c.idAuthor, c.title, c.description, c.typeMachine,
                 com.id AS comment_id, com.user_origin_id, com.user_target_id, com.comment, com.created, com.likes_count,
                 rep.id AS reply_id, rep.user_origin_id AS reply_user_origin_id, rep.user_target_id AS reply_user_target_id, rep.reply AS reply_text, rep.created AS reply_created
             FROM content c
@@ -26,6 +26,7 @@ try {
             $formattedResults[$postId] = array(
                 'id' => $postId,
                 'type' => $row['type'],
+                'idAuthor' => $row['idAuthor'],
                 'title' => $row['title'],
                 'description' => $row['description'],
                 'typeMachine' => $row['typeMachine'],
